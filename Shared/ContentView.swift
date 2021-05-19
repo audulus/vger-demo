@@ -5,7 +5,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var model = TigerModel()
     var body: some View {
-        TigerView(model: model)
+        TileTestView(model: model)
     }
 }
 

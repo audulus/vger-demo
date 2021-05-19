@@ -5,8 +5,8 @@
         "package": "vger",
         "repositoryURL": "https://github.com/audulus/vger.git",
         "state": {
-          "branch": "main",
-          "revision": "27c9b1ba236cc110c52212b08422bb756054431a",
+          "branch": "tile-rendering",
+          "revision": "787546f11a5db3eb086e9ed603c1b4239005a438",
           "version": null
         }
       }
