@@ -29,7 +29,7 @@ class TigerModel : ObservableObject {
             let fcolor = 1.0/255.0 * SIMD4<Float>( Float(c & 0xff), Float( (c>>8) & 0xff),
                                        Float( (c>>16) & 0xff), Float( (c>>24) & 0xff ))
 
-            let paint = vgerColorPaint(fcolor)
+            let paint = vgerColorPaint(vger, fcolor)
 
             var path = shape?.pointee.paths
             while path != nil {

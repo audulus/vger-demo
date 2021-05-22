@@ -25,7 +25,7 @@ struct DemoView: View {
         bez.cvs.0 = .init(x: 50, y: 450)
         bez.cvs.1 = .init(x: 100, y: 450)
         bez.cvs.2 = .init(x: 100, y: 500)
-        bez.paint = vgerLinearGradient(.init(x: 50, y: 450), .init(x: 100, y: 450), cyan, magenta)
+        bez.paint = vgerLinearGradient(vger, .init(x: 50, y: 450), .init(x: 100, y: 450), cyan, magenta)
 
         vgerRender(vger, &bez)
         textAt(vger, 150, 450, "Quadratic Bezier stroke")
@@ -36,7 +36,7 @@ struct DemoView: View {
         rect.radius = 10
         rect.cvs.0 = .init(x: 50, y: 350)
         rect.cvs.1 = .init(x: 100, y: 400)
-        rect.paint = vgerLinearGradient(.init(x: 50, y: 350), .init(x: 100, y: 400), cyan, magenta)
+        rect.paint = vgerLinearGradient(vger, .init(x: 50, y: 350), .init(x: 100, y: 400), cyan, magenta)
 
         vgerRender(vger, &rect)
         textAt(vger, 150, 350, "Rounded rectangle")
@@ -46,7 +46,7 @@ struct DemoView: View {
         circle.width = 0.0
         circle.radius = 25
         circle.cvs.0 = .init(x: 75, y: 275)
-        circle.paint = vgerLinearGradient(.init(x: 50, y: 250), .init(x: 100, y: 300), cyan, magenta)
+        circle.paint = vgerLinearGradient(vger, .init(x: 50, y: 250), .init(x: 100, y: 300), cyan, magenta)
 
         vgerRender(vger, &circle)
         textAt(vger, 150, 250, "Circle")
@@ -56,7 +56,7 @@ struct DemoView: View {
         line.width = 2.0
         line.cvs.0 = .init(x: 50, y: 150)
         line.cvs.1 = .init(x: 100, y: 200)
-        line.paint = vgerLinearGradient(.init(x: 50, y: 150), .init(x: 100, y: 200), cyan, magenta)
+        line.paint = vgerLinearGradient(vger, .init(x: 50, y: 150), .init(x: 100, y: 200), cyan, magenta)
 
         vgerRender(vger, &line)
         textAt(vger, 150, 150, "Line segment")
@@ -71,7 +71,7 @@ struct DemoView: View {
         arc.cvs.1 = .init(sin(theta), cos(theta))
         arc.cvs.2 = .init(sin(aperture), cos(aperture))
         arc.radius = 25
-        arc.paint = vgerLinearGradient(.init(x: 50, y: 50), .init(x: 100, y: 100), cyan, magenta)
+        arc.paint = vgerLinearGradient(vger, .init(x: 50, y: 50), .init(x: 100, y: 100), cyan, magenta)
 
         vgerRender(vger, &arc)
         textAt(vger, 150, 050, "Arc")
