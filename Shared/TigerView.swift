@@ -33,11 +33,18 @@ class TigerModel : ObservableObject {
 
             var path = shape?.pointee.paths
             while path != nil {
-                path?.pointee.pts.withMemoryRebound(to: SIMD2<Float>.self, capacity: Int(path!.pointee.npts), { cvs in
-                    vgerFillCubicPath(vger, cvs, path!.pointee.npts, paint, true)
-                })
+                let n = Int(path!.pointee.npts)
+                path?.pointee.pts.withMemoryRebound(to: SIMD2<Float>.self, capacity:n) { cvs in
+                    vgerMoveTo(vger, cvs[0])
+                    var i = 1
+                    while i < n-2 {
+                        vgerCubicApproxTo(vger, cvs[i], cvs[i+1], cvs[i+2])
+                        i += 3
+                    }
+                }
                 path = path?.pointee.next
             }
+            vgerFill(vger, paint)
 
             shape = shape?.pointee.next
         }
