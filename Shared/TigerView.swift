@@ -32,9 +32,9 @@ class TigerModel : ObservableObject {
             let paint = vgerColorPaint(vger, fcolor)
 
             var path = s.pointee.paths
-            while path != nil {
-                let n = Int(path!.pointee.npts)
-                path?.pointee.pts.withMemoryRebound(to: SIMD2<Float>.self, capacity:n) { cvs in
+            while let p = path {
+                let n = Int(p.pointee.npts)
+                p.pointee.pts.withMemoryRebound(to: SIMD2<Float>.self, capacity:n) { cvs in
                     vgerMoveTo(vger, cvs[0])
                     var i = 1
                     while i < n-2 {
@@ -42,7 +42,7 @@ class TigerModel : ObservableObject {
                         i += 3
                     }
                 }
-                path = path?.pointee.next
+                path = p.pointee.next
             }
             vgerFill(vger, paint)
 
