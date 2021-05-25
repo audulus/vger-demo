@@ -22,16 +22,16 @@ class TigerModel : ObservableObject {
         vgerScale(vger, .init(repeating: Float(scale)))
 
         var shape = image.pointee.shapes
-        while shape != nil {
+        while let s = shape {
 
-            let c = shape!.pointee.fill.color
+            let c = s.pointee.fill.color
 
             let fcolor = 1.0/255.0 * SIMD4<Float>( Float(c & 0xff), Float( (c>>8) & 0xff),
                                        Float( (c>>16) & 0xff), Float( (c>>24) & 0xff ))
 
             let paint = vgerColorPaint(vger, fcolor)
 
-            var path = shape?.pointee.paths
+            var path = s.pointee.paths
             while path != nil {
                 let n = Int(path!.pointee.npts)
                 path?.pointee.pts.withMemoryRebound(to: SIMD2<Float>.self, capacity:n) { cvs in
@@ -46,7 +46,7 @@ class TigerModel : ObservableObject {
             }
             vgerFill(vger, paint)
 
-            shape = shape?.pointee.next
+            shape = s.pointee.next
         }
 
         vgerRestore(vger)
