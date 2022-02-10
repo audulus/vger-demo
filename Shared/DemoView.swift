@@ -19,61 +19,27 @@ struct DemoView: View {
     func draw(vger: vgerContext) {
         vgerSave(vger)
 
-        var bez = vgerPrim()
-        bez.type = vgerBezier
-        bez.width = 1.0
-        bez.cvs.0 = .init(x: 50, y: 450)
-        bez.cvs.1 = .init(x: 100, y: 450)
-        bez.cvs.2 = .init(x: 100, y: 500)
-        bez.paint = vgerLinearGradient(vger, .init(x: 50, y: 450), .init(x: 100, y: 450), cyan, magenta)
-
-        vgerRender(vger, &bez)
+        let bezPaint = vgerLinearGradient(vger, .init(x: 50, y: 450), .init(x: 100, y: 450), cyan, magenta, 0.0)
+        vgerStrokeBezier(vger, vgerBezierSegment(a: .init(x: 50, y: 450), b: .init(x: 100, y: 450), c: .init(x: 100, y: 500)), 1.0, bezPaint)
         textAt(vger, 150, 450, "Quadratic Bezier stroke")
 
-        var rect = vgerPrim()
-        rect.type = vgerRect
-        rect.width = 0.0
-        rect.radius = 10
-        rect.cvs.0 = .init(x: 50, y: 350)
-        rect.cvs.1 = .init(x: 100, y: 400)
-        rect.paint = vgerLinearGradient(vger, .init(x: 50, y: 350), .init(x: 100, y: 400), cyan, magenta)
-
-        vgerRender(vger, &rect)
+        let rectPaint = vgerLinearGradient(vger, .init(x: 50, y: 350), .init(x: 100, y: 400), cyan, magenta, 0.0)
+        vgerFillRect(vger, .init(x: 50, y: 350), .init(x: 100, y: 400), 10.0, rectPaint)
         textAt(vger, 150, 350, "Rounded rectangle")
 
-        var circle = vgerPrim()
-        circle.type = vgerCircle
-        circle.width = 0.0
-        circle.radius = 25
-        circle.cvs.0 = .init(x: 75, y: 275)
-        circle.paint = vgerLinearGradient(vger, .init(x: 50, y: 250), .init(x: 100, y: 300), cyan, magenta)
-
-        vgerRender(vger, &circle)
+        let circlePaint = vgerLinearGradient(vger, .init(x: 50, y: 250), .init(x: 100, y: 300), cyan, magenta, 0.0)
+        vgerFillCircle(vger, .init(x: 75, y: 275), 25, circlePaint)
         textAt(vger, 150, 250, "Circle")
 
-        var line = vgerPrim()
-        line.type = vgerSegment
-        line.width = 2.0
-        line.cvs.0 = .init(x: 50, y: 150)
-        line.cvs.1 = .init(x: 100, y: 200)
-        line.paint = vgerLinearGradient(vger, .init(x: 50, y: 150), .init(x: 100, y: 200), cyan, magenta)
-
-        vgerRender(vger, &line)
+        let linePaint = vgerLinearGradient(vger, .init(x: 50, y: 150), .init(x: 100, y: 200), cyan, magenta, 0.0)
+        vgerStrokeSegment(vger, .init(x: 50, y: 150), .init(x: 100, y: 200), 2.0, linePaint)
         textAt(vger, 150, 150, "Line segment")
 
         let theta: Float = 0.0 // orientation
         let aperture: Float = 0.5 * .pi
 
-        var arc = vgerPrim()
-        arc.type = vgerArc
-        arc.width = 1.0
-        arc.cvs.0 = .init(x: 75, y: 75)
-        arc.cvs.1 = .init(sin(theta), cos(theta))
-        arc.cvs.2 = .init(sin(aperture), cos(aperture))
-        arc.radius = 25
-        arc.paint = vgerLinearGradient(vger, .init(x: 50, y: 50), .init(x: 100, y: 100), cyan, magenta)
-
-        vgerRender(vger, &arc)
+        let arcPaint = vgerLinearGradient(vger, .init(x: 50, y: 50), .init(x: 100, y: 100), cyan, magenta, 0.0)
+        vgerStrokeArc(vger, .init(x: 75, y: 75), 25, 1.0, theta, aperture, arcPaint)
         textAt(vger, 150, 050, "Arc")
 
         vgerRestore(vger);
