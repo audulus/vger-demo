@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29AFA89927B56FE700BCA9AF /* Triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 29AFA89827B56FE700BCA9AF /* Triangle.svg */; };
+		29AFA89A27B56FE700BCA9AF /* Triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 29AFA89827B56FE700BCA9AF /* Triangle.svg */; };
 		29E7DA2926509E5800A196FF /* TigerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2826509E5800A196FF /* TigerView.swift */; };
 		29E7DA2A26509E5800A196FF /* TigerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2826509E5800A196FF /* TigerView.swift */; };
 		29E7DA2F26509EA400A196FF /* nanosvg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2E26509EA400A196FF /* nanosvg.m */; };
@@ -26,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29AFA89827B56FE700BCA9AF /* Triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Triangle.svg; sourceTree = "<group>"; };
 		29E7DA2826509E5800A196FF /* TigerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerView.swift; sourceTree = "<group>"; };
 		29E7DA2C26509EA300A196FF /* VgerDemo (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VgerDemo (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		29E7DA2D26509EA300A196FF /* VgerDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VgerDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 				29E7DA2C26509EA300A196FF /* VgerDemo (iOS)-Bridging-Header.h */,
 				29E7DA2D26509EA300A196FF /* VgerDemo (macOS)-Bridging-Header.h */,
 				29E7DA382650B6D600A196FF /* Ghostscript_Tiger.svg */,
+				29AFA89827B56FE700BCA9AF /* Triangle.svg */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -213,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29AFA89927B56FE700BCA9AF /* Triangle.svg in Resources */,
 				29F372CB26421D7F00B38055 /* Assets.xcassets in Resources */,
 				29E7DA392650B6D600A196FF /* Ghostscript_Tiger.svg in Resources */,
 			);
@@ -222,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29AFA89A27B56FE700BCA9AF /* Triangle.svg in Resources */,
 				29F372CC26421D7F00B38055 /* Assets.xcassets in Resources */,
 				29E7DA3A2650B6D600A196FF /* Ghostscript_Tiger.svg in Resources */,
 			);
