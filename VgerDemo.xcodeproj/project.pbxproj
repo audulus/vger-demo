@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		29AFA89927B56FE700BCA9AF /* Triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 29AFA89827B56FE700BCA9AF /* Triangle.svg */; };
 		29AFA89A27B56FE700BCA9AF /* Triangle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 29AFA89827B56FE700BCA9AF /* Triangle.svg */; };
+		29B08BFE27D71CAC00E0AB8F /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B08BFD27D71CAC00E0AB8F /* HelloView.swift */; };
+		29B08BFF27D71CAC00E0AB8F /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B08BFD27D71CAC00E0AB8F /* HelloView.swift */; };
 		29E7DA2926509E5800A196FF /* TigerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2826509E5800A196FF /* TigerView.swift */; };
 		29E7DA2A26509E5800A196FF /* TigerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2826509E5800A196FF /* TigerView.swift */; };
 		29E7DA2F26509EA400A196FF /* nanosvg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E7DA2E26509EA400A196FF /* nanosvg.m */; };
@@ -29,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		29AFA89827B56FE700BCA9AF /* Triangle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Triangle.svg; sourceTree = "<group>"; };
+		29B08BFD27D71CAC00E0AB8F /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		29E7DA2826509E5800A196FF /* TigerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerView.swift; sourceTree = "<group>"; };
 		29E7DA2C26509EA300A196FF /* VgerDemo (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VgerDemo (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		29E7DA2D26509EA300A196FF /* VgerDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VgerDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 				29F372B626421D7F00B38055 /* Assets.xcassets */,
 				29F372E4264223DE00B38055 /* DemoView.swift */,
 				29E7DA2826509E5800A196FF /* TigerView.swift */,
+				29B08BFD27D71CAC00E0AB8F /* HelloView.swift */,
 				29E7DA3C2650BBA200A196FF /* nanosvg.h */,
 				29E7DA2E26509EA400A196FF /* nanosvg.m */,
 				29E7DA2C26509EA300A196FF /* VgerDemo (iOS)-Bridging-Header.h */,
@@ -243,6 +247,7 @@
 				29E7DA2926509E5800A196FF /* TigerView.swift in Sources */,
 				29F372C926421D7F00B38055 /* ContentView.swift in Sources */,
 				29F372E5264223DE00B38055 /* DemoView.swift in Sources */,
+				29B08BFE27D71CAC00E0AB8F /* HelloView.swift in Sources */,
 				29F372C726421D7F00B38055 /* VgerDemoApp.swift in Sources */,
 				29E7DA2F26509EA400A196FF /* nanosvg.m in Sources */,
 			);
@@ -255,6 +260,7 @@
 				29E7DA2A26509E5800A196FF /* TigerView.swift in Sources */,
 				29F372CA26421D7F00B38055 /* ContentView.swift in Sources */,
 				29F372E6264223DE00B38055 /* DemoView.swift in Sources */,
+				29B08BFF27D71CAC00E0AB8F /* HelloView.swift in Sources */,
 				29F372C826421D7F00B38055 /* VgerDemoApp.swift in Sources */,
 				29E7DA3026509EA400A196FF /* nanosvg.m in Sources */,
 			);
