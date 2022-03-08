@@ -59,10 +59,12 @@ struct TigerView: View {
 
     var body: some View {
         GeometryReader { geom in
-            VgerView(renderCallback: { vger in model.draw(vger: vger, size: geom.size)})
-                .gesture(MagnificationGesture().onChanged({ scale in
-                    model.scale = scale
-                }))
+            VgerView { vger in
+                model.draw(vger: vger, size: geom.size)
+            }
+            .gesture(MagnificationGesture().onChanged({ scale in
+                model.scale = scale
+            }))
         }
 
     }
